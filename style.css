@@ -1,0 +1,60 @@
+body
+{
+	padding: 0;
+	margin: 0;
+	background: #c1d7fe;
+	position: relative;
+}
+
+nav
+{
+	background: #fec6f4;
+	display: inline-block;
+	width: 15%;
+	height: 100%;
+	position: relative;
+}
+
+h1
+{
+	text-align: center;
+	line-height: 150px;
+	background: url("Printemps.jpg");
+        background-attachment:fixed;
+	background-size: 100%;
+        margin: 0;
+        padding: 0;
+	height: 150px;
+	font-size: 4em;
+	color: #830c34;
+}
+
+#accueil
+{
+	text-decoration: none;
+	color: #830c34;
+	padding: 5px;
+	display: block;
+}
+
+#accueil:hover
+{
+	color:black;
+	transition: color 1s;
+}
+
+#blog
+{
+	margin-right: 1%;
+	margin-top: 1%;
+	margin-left: 16%;
+	background: #fcfef3;
+	padding: 1%;
+	display: inline-block;
+	width: 81%;
+}
+
+#blog h2
+{
+
+}
