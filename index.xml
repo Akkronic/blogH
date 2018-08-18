@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Menu>
+	<Folder1>
+		<Folder2>
+			<Item>file1</Item>
+			<Item>file2</Item>
+		</Folder2>
+		<Item>file3</Item>
+	</Folder1>
+	<Folder1>
+	</Folder1>
+</Menu>
