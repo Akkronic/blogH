@@ -38,11 +38,8 @@ nav a
 {
 	text-decoration: none;
 	color: #830c34;
-}
-
-nav a
-{
 	outline: 0;
+	display: block;
 }
 
 h1
