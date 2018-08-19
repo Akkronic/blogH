@@ -17,11 +17,39 @@ nav
 	margin-right: 1%;
 }
 
+nav ul
+{
+	padding: 10px;
+	border-radius: 0.2em;
+}
+
+nav li
+{
+	list-style-type: none;
+	border-radius: 0.2em;
+}
+
+nav li:hover
+{
+	background: #ff6eb9;
+}
+
+nav a
+{
+	text-decoration: none;
+	color: #830c34;
+}
+
+nav a
+{
+	outline: 0;
+}
+
 h1
 {
 	text-align: center;
 	line-height: 150px;
-	background: url("Printemps.jpg");
+	background: url("imgs/Printemps.jpg");
         background-attachment:fixed;
 	background-size: 100%;
         margin: 0;
@@ -60,4 +88,33 @@ h1
 #blog h2
 {
 
+}
+
+#topLink
+{
+	position: fixed;
+	right: 20px;
+	top: 30px;
+	padding: 20px;
+	opacity: 0.9;
+	border-radius: 0.5em;
+	display: none;
+	outline: 0;
+}
+
+#topLink:hover
+{
+	background: #fec6f4;
+}
+
+#imgUp
+{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.dir
+{
+	display: none;
 }
