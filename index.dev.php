@@ -29,6 +29,7 @@
 								echo '<ul class="dir '.$backgroundColor.'" id="'.$id.'">';
 								echo "\n";
 								$id++;
+
 								if ($backgroundColor == 0)
 									$id = buildNavFromFolder($root.$element."/", $id, $backgroundColor + 1);
 								else
@@ -38,7 +39,7 @@
 							}
 							else
 							{
-								echo '<li><a href="index.php?page='.$root.$element.'">'.pathinfo($element, PATHINFO_FILENAME).'</a></li>';
+								echo '<li><a href="index.php?page='.$root.$element.'">'.getNavName($root.$element).'</a></li>';
 								echo "\n";
 							}
 						}
