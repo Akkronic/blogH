@@ -40,6 +40,9 @@ nav a
 	color: #830c34;
 	outline: 0;
 	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 h1
@@ -114,4 +117,18 @@ h1
 .dir
 {
 	display: none;
+}
+
+.openedDir
+{
+	display: block;
+}
+
+.clair
+{
+	background: #ff6eb9;
+}
+.fonce
+{
+	background: #fec6f4;
 }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Chez Fitche</title>
 		<meta charset="UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
@@ -23,29 +22,33 @@
 							if($element[0] === ".")
 								continue;
 							if (is_dir($root.$element))
-							{	
-								echo '<li class="dirName" id="folder_'.$id.'"><a href="javascript:void(0)" onClick="showFolderContent(\''.$id.'\');">'.$element.'</a></li>';
+							{
+								if (!empty($_GET["page"]) && strpos($_GET["page"], $root.$element) === 0)
+									$dirState = "openedDir";
+								else
+									$dirState = "closedDir";
+								echo '<li class="dirName" id="folder_'.$id.'"><a title='.pathinfo($element, PATHINFO_FILENAME).' href="javascript:void(0)" onClick="showFolderContent(\''.$id.'\');">'.$element.'</a></li>';
 								echo "\n";
-								echo '<ul class="dir '.$backgroundColor.'" id="'.$id.'">';
+								echo '<ul class="dir '.$backgroundColor.' '.$dirState.'" id="'.$id.'">';
 								echo "\n";
 								$id++;
-								if ($backgroundColor == 0)
-									$id = buildNavFromFolder($root.$element."/", $id, $backgroundColor + 1);
+								if ($backgroundColor == "fonce")
+									$id = buildNavFromFolder($root.$element."/", $id, "clair");
 								else
-									$id = buildNavFromFolder($root.$element."/", $id, $backgroundColor - 1);
+									$id = buildNavFromFolder($root.$element."/", $id, "fonce");
 								echo '</ul>';
 								echo "\n";
 							}
 							else
 							{
-								echo '<li><a href="index.php?page='.$root.$element.'">'.pathinfo($element, PATHINFO_FILENAME).'</a></li>';
+								echo '<li><a href="index.php?page='.$root.$element.'" title="'.pathinfo($element, PATHINFO_FILENAME).'" >'.pathinfo($element, PATHINFO_FILENAME).'</a></li>';
 								echo "\n";
 							}
 						}
 						return $id;
 					}
 					$root = "Categories/";
-					buildNavFromFolder($root, 0, 0);
+					buildNavFromFolder($root, 0, "clair");
 				?>
 			</ul>
 		</nav>
@@ -53,6 +56,8 @@
 			<?php
 				if (empty($_GET["page"]))
 					include "pages/accueil.html";
+				elseif ($_GET["page"] === "test")
+					include 'pages/test.html';
 				elseif (!file_exists($_GET["page"]))
 					include 'pages/404.html';
 				else if (!strstr($_GET["page"], '../'))

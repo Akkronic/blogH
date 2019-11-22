@@ -5,6 +5,11 @@ function showFolderContent(folderId)
 	display = style.getPropertyValue('display');
 	if (display == "none")
 	{
+		var dirNames = document.getElementsByClassName("dirName");
+		for (var i = 0; i < dirName.lenght; i++) {
+			dirName[i].style.display = "none";
+		}
+
 		if (element.classList.contains("clair"))
 			document.getElementById(folderId).style.background = "#ff6eb9";
 		else	
