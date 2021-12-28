@@ -67,7 +67,7 @@
 			?>
 		</section>
 		<a id="topLink" href="javascript: void(0)" onClick="scrollUp();"><img id="imgUp" src="imgs/scrollUp.png" alt="Haut de page"/></a>
-		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/scrollUp.js" type="text/javascript" charset="utf-8"></script>
 	</body>
