@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
 	<body>
-		<h1>Chez Fitche</h1>
+		<h1>Dans la cuisine de Poulou</h1>
 		<nav>
 			<li><a id="accueil" href="index.php">Accueil</a></li>
 			<ul>
